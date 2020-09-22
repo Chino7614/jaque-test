@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --orange: #fa6a00;
+  --white: #ffffff;
+  --black: #131B31;
+  --gray: #969696;
+}
+
+body {
+  background: #DFDFDF;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.button {
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 2px;
+  &-secondary {
+    border: 1px var(--orange) solid;
+    background: var(--white);
+    color: var(--orange);
+    width: 167px;
+    height: 48px;
+  }
+  &-primary {
+    width: 225px;
+    height: 48px;
+    background: var(--orange);
+    color: var(--white);
+    border: transparent;
+  }
+}

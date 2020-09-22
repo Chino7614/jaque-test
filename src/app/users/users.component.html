@@ -1,0 +1,14 @@
+<div>
+    <div class="container">
+        <div class="container-information">
+            <label class="user" for="user">Usuarios</label>
+            <label class="description" for="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </label>
+        </div>
+        <div class="buttons">
+            <button class="button-secondary margin">
+                <label for="ege" class="far fa-eye"></label>Previsualizar</button>
+            <button class="button-primary"><label class="fas fa-plus"></label> nuevo usuario</button>
+        </div>
+    </div>
+    <app-table [headers]="headers" [data]="userResponse"></app-table>
+</div>

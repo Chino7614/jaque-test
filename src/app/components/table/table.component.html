@@ -1,0 +1,11 @@
+
+    <div class="table-container">
+        <div class="header" *ngFor="let key of headers | tableKey">
+            {{key.value}}
+            <div class="row" *ngFor="let item of data">
+                <label *ngIf="key.keys === 'picture'" for="grip" class="grip-style fas fa-grip-vertical"></label>
+                <img class="style-image" *ngIf="key.keys === 'picture'" [src]="item.picture" alt="photo" />
+             <label *ngIf="key.keys !== 'picture'" for="data">{{item[key.keys]}} </label>
+            </div>
+        </div>
+    </div>

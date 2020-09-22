@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "jaque-test"
+    }
+  },
+  "defaultProject": "jaque-test",
+  "cli": {
+    "analytics": "218a72d5-faea-4db5-b9be-10c9cecaf230"
+  }
 }
