@@ -7,18 +7,23 @@ import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TableKeyPipe } from './pipes/table-key.pipe';
 import { TableComponent } from './components/table/table.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     TableKeyPipe,
-    TableComponent
+    TableComponent,
+    ModalComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

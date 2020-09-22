@@ -3,9 +3,10 @@
         <div class="header" *ngFor="let key of headers | tableKey">
             {{key.value}}
             <div class="row" *ngFor="let item of data">
-                <label *ngIf="key.keys === 'picture'" for="grip" class="grip-style fas fa-grip-vertical"></label>
+                <img *ngIf="key.keys === 'picture'" src="/assets/icons/points.svg" alt="">
                 <img class="style-image" *ngIf="key.keys === 'picture'" [src]="item.picture" alt="photo" />
-             <label *ngIf="key.keys !== 'picture'" for="data">{{item[key.keys]}} </label>
+             <label *ngIf="key.keys !== 'picture' && key.keys !== 'active'" for="data">{{item[key.keys]}} </label>
+             <img *ngIf="key.keys === 'active'" src="/assets/icons/{{item.active ? 'toggle_on.svg' : 'toggle_off.svg'}}" alt="">
             </div>
         </div>
     </div>

@@ -6,9 +6,10 @@
         </div>
         <div class="buttons">
             <button class="button-secondary margin">
-                <label for="ege" class="far fa-eye"></label>Previsualizar</button>
-            <button class="button-primary"><label class="fas fa-plus"></label> nuevo usuario</button>
+               <img src="/assets/icons/eye.svg" alt=""> Previsualizar</button>
+            <button (click)="showModal = true" class="button-primary"><img src="/assets/icons/add.svg" alt="" /> nuevo usuario</button>
         </div>
     </div>
     <app-table [headers]="headers" [data]="userResponse"></app-table>
 </div>
+<app-modal (showModal)="showModal = $event" (saveData)="addData($event)" *ngIf="showModal"></app-modal>

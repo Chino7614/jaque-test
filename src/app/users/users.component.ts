@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RoleService } from '../services/roles.service';
+import { UserService } from '../services/user.role.service';
 
 @Component({
   selector: 'app-users',
@@ -9,6 +9,7 @@ import { RoleService } from '../services/roles.service';
 export class UsersComponent implements OnInit {
   userResponse: any;
   roleResponse: any;
+  showModal = false;
   headers = [
     {
       picture: 'Foto',
@@ -20,15 +21,20 @@ export class UsersComponent implements OnInit {
       active: 'Status',
     },
   ];
-  constructor(private roleService: RoleService) {
-    this.roleService
-      .roles()
-      .subscribe((response) => (this.roleResponse = response));
-    this.roleService.user().subscribe((response) => {
-      this.userResponse = response.users;
-      console.log('userResponse', this.userResponse);
-    });
+  constructor(private userService: UserService) {
+    this.userService
+      .user()
+      .subscribe((response) => (this.userResponse = response.users));
   }
 
   ngOnInit(): void {}
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  addData(event) {
+    this.userResponse.push(event);
+    this.showModal = false;
+  }
 }
