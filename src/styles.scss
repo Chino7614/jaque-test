@@ -5,9 +5,11 @@
   --black: #131B31;
   --gray: #969696;
   --ligth-gray: #e0e0e0;
+  --label: #5F5F5F;
 }
 
 body {
+  margin: 0;
   background: var(--ligth-gray);
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }

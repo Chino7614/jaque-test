@@ -1,0 +1,23 @@
+.content-header {
+    height: 64px;
+    background: var(--white);
+    margin-bottom: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+    .item-style {
+        display: flex;
+        align-items: center;
+        .user {
+            margin: 0 4px;
+            color: var(--label);
+            font-size: 14px;
+        }
+    }
+
+    .height-img {
+        height: 30px;
+    }
+}

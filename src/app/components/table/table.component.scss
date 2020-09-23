@@ -14,7 +14,7 @@
     }
 .row {
     height: 64px;
-    color: #5F5F5F;
+    color: var(--label);
     font-size: 14px;
     line-height: 18px;
     font-weight: normal;
@@ -40,7 +40,7 @@
     justify-content: space-between;
     .row {
         height: 64px;
-        color: #5F5F5F;
+        color: var(--label);
         font-size: 14px;
         line-height: 18px;
         font-weight: normal;

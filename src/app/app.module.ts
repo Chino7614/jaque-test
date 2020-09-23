@@ -14,6 +14,7 @@ import { SearchPipe } from './pipes/search.pipe';
 import { OrderPipe } from './pipes/order.pipe';
 import { StatusPipe } from './pipes/status.pipe';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     SearchPipe,
     OrderPipe,
     StatusPipe,
+    HeaderComponent,
   ],
   imports: [
     HttpClientModule,
