@@ -13,6 +13,8 @@ export class ModalComponent implements OnInit {
   modalForm: FormGroup;
   roleResponse: any;
   toggleOn = false;
+  urlImg = '/assets/icons/user.svg';
+  selectImg = false;
   constructor(private formBuilder: FormBuilder, private roleService: RoleService) {
     this.modalForm = this.formBuilder.group({
       picture: [''],
@@ -29,16 +31,18 @@ export class ModalComponent implements OnInit {
   ngOnInit(): void {}
 
   save() {
-    this.picture.setValue('http://www.fillmurray.com/201/300');
+    this.picture.setValue(this.urlImg);
     this.saveData.emit(this.modalForm.value);
-    console.log(this.modalForm.value);
   }
 
   addToggle() {
     this.toggleOn = !this.toggleOn;
-    console.log('fa', this.toggleOn)
     this.status.setValue(this.toggleOn);
-    console.log('asdfa', this.modalForm.value);
+  }
+
+  selectImage() {
+    this.urlImg = 'http://www.fillmurray.com/202/300';
+    this.selectImg = true;
   }
 
   get status(): AbstractControl {

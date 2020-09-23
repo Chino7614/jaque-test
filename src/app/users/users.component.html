@@ -10,6 +10,9 @@
             <button (click)="showModal = true" class="button-primary"><img src="/assets/icons/add.svg" alt="" /> nuevo usuario</button>
         </div>
     </div>
-    <app-table [headers]="headers" [data]="userResponse"></app-table>
+    <div class="content-table">
+        <app-filters (emitSearch)="search($event)" (emitOrder)="order($event)" (emitStatus)="status($event)"></app-filters>
+        <app-table [headers]="headers" [data]="filterArray"></app-table>
+    </div>
 </div>
 <app-modal (showModal)="showModal = $event" (saveData)="addData($event)" *ngIf="showModal"></app-modal>

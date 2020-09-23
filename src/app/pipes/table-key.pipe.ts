@@ -14,7 +14,6 @@ export class TableKeyPipe implements PipeTransform {
         keys.push({keys: key, value: response[key]});
       }
     });
-    console.log('resonses', keys);
     return keys;
   }
 

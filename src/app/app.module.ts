@@ -9,6 +9,11 @@ import { TableKeyPipe } from './pipes/table-key.pipe';
 import { TableComponent } from './components/table/table.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FiltersComponent } from './components/filters/filters.component';
+import { SearchPipe } from './pipes/search.pipe';
+import { OrderPipe } from './pipes/order.pipe';
+import { StatusPipe } from './pipes/status.pipe';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -16,17 +21,22 @@ import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
     UsersComponent,
     TableKeyPipe,
     TableComponent,
-    ModalComponent
+    ModalComponent,
+    FiltersComponent,
+    SearchPipe,
+    OrderPipe,
+    StatusPipe,
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragDropModule
   ],
-  providers: [],
+  providers: [SearchPipe, OrderPipe, StatusPipe],
   bootstrap: [AppComponent],
-  exports: [TableKeyPipe],
+  exports: [TableKeyPipe, SearchPipe, OrderPipe, StatusPipe],
 })
 export class AppModule { }

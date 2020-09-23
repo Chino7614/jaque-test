@@ -1,18 +1,18 @@
 .table-container {
-    display: flex;
-    justify-content: space-between;
-    background: var(--white);
     padding: 19px 17px;
 
-    .header {
-    color: #494949;
-    font-size: 14px;
-    line-height: 18px;
-    font-weight: 600;
+    table {
+        width: 100%;
+        
+        .header {
+            color: #494949;
+            font-size: 14px;
+            line-height: 18px;
+            font-weight: 600;
+            text-align: start;
+            }   
     }
 .row {
-    display: flex;
-    align-items: center;
     height: 64px;
     color: #5F5F5F;
     font-size: 14px;
@@ -28,4 +28,30 @@
         width: 40px;
         border-radius: 20px;
     }
+}
+
+.test {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cdk-drag-preview{
+    display: flex;
+    justify-content: space-between;
+    .row {
+        height: 64px;
+        color: #5F5F5F;
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: normal;
+        .grip-style {
+            height: 24px;
+            margin-right: 29px;
+        }
+    }
+        .style-image {
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+        }
 }

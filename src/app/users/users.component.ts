@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderPipe } from '../pipes/order.pipe';
+import { SearchPipe } from '../pipes/search.pipe';
+import { StatusPipe } from '../pipes/status.pipe';
 import { UserService } from '../services/user.role.service';
 
 @Component({
@@ -8,8 +11,9 @@ import { UserService } from '../services/user.role.service';
 })
 export class UsersComponent implements OnInit {
   userResponse: any;
-  roleResponse: any;
+  filterArray: any;
   showModal = false;
+  searchText: string;
   headers = [
     {
       picture: 'Foto',
@@ -21,10 +25,16 @@ export class UsersComponent implements OnInit {
       active: 'Status',
     },
   ];
-  constructor(private userService: UserService) {
-    this.userService
-      .user()
-      .subscribe((response) => (this.userResponse = response.users));
+  constructor(
+    private userService: UserService,
+    private searchPipe: SearchPipe,
+    private orderPipe: OrderPipe,
+    private statusPipe: StatusPipe
+  ) {
+    this.userService.user().subscribe((response) => {
+      this.userResponse = response.users;
+      this.filterArray = response.users;
+    });
   }
 
   ngOnInit(): void {}
@@ -36,5 +46,19 @@ export class UsersComponent implements OnInit {
   addData(event) {
     this.userResponse.push(event);
     this.showModal = false;
+  }
+
+  search(text: string) {
+    this.filterArray = this.searchPipe.transform(this.userResponse, text);
+    console.log('filterArra', this.filterArray);
+  }
+
+  order(order: string) {
+    console.log('order', order, 'showModal', this.showModal);
+    this.filterArray = this.orderPipe.transform(this.userResponse, order);
+  }
+
+  status(status: string) {
+    this.filterArray = this.statusPipe.transform(this.userResponse, status);
   }
 }

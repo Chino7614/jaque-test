@@ -1,0 +1,27 @@
+.content-filter {
+    padding: 24px 37px;
+    display: flex;
+    justify-content: space-between;
+
+    .content-input {
+        width: 30%;
+        display: flex;
+        align-items: center;
+
+            label {
+                font-size: 14px;
+                line-height: 18px;
+                color: #5f5f5f;
+                padding-right: 5px;
+                border-right: 1px var(--orange) solid;
+                margin-right: 5px;
+            }
+    }
+
+    .content-drop {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-between;
+    }
+}

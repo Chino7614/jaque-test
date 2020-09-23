@@ -1,0 +1,29 @@
+<div class="content-filter">
+    <div class="content-input">
+            <img src="/assets/icons/search.svg" alt="search">
+            <label for="search">Búsqueda</label>
+        <input (keyup)="emitSearch.emit($event.target.value)" class="input-style" type="text"/>
+    </div>
+    <div class="content-drop">
+        <div>
+            <select class="dropdown-style">
+                <option value="" disabled selected hidden>Selecciona paginado</option>
+                <option value="">8</option>
+                <option value="">15</option>
+            </select>
+        </div>
+        <div>
+            <select (change)="emitOrder.emit($event.target.value)" class="dropdown-style">
+                <option value="true" selected>Ordenar de A - Z</option>
+                <option value="false">Ordenar de Z - A</option>
+            </select>
+        </div>
+        <div>
+            <select (change)="emitStatus.emit($event.target.value)" class="dropdown-style">
+                <option selected>Todos</option>
+                <option value="active">Activados</option>
+                <option value="disabled">Desactivados</option>
+            </select>
+        </div>
+    </div>
+</div>
