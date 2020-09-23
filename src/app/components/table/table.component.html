@@ -14,7 +14,7 @@
                 <td *ngFor="let key of headers | tableKey">
                     <img class="style-image" *ngIf="key.keys === 'picture'" [src]="item.picture" alt="photo" />
                  <label *ngIf="key.keys !== 'picture' && key.keys !== 'active'" for="data">{{item[key.keys]}} </label>
-                 <img *ngIf="key.keys === 'active'" src="/assets/icons/{{item.active ? 'toggle_on.svg' : 'toggle_off.svg'}}" alt="">
+                 <img class="status" *ngIf="key.keys === 'active'" src="/assets/icons/{{item.active ? 'toggle_on.svg' : 'toggle_off.svg'}}" alt="status">
                 </td>
             </tr>
         </table>

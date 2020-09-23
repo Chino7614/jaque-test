@@ -18,9 +18,17 @@
     font-size: 14px;
     line-height: 18px;
     font-weight: normal;
+    cursor: pointer;
+    td {
+        cursor: pointer;
+    }
     .grip-style {
         height: 24px;
         margin-right: 29px;
+    }
+
+    .status {
+        height: 30px;
     }
 }
     .style-image {
@@ -28,11 +36,6 @@
         width: 40px;
         border-radius: 20px;
     }
-}
-
-.test {
-    display: flex;
-    justify-content: space-between;
 }
 
 .cdk-drag-preview{

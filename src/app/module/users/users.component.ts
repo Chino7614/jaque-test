@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { OrderPipe } from '../pipes/order.pipe';
-import { SearchPipe } from '../pipes/search.pipe';
-import { StatusPipe } from '../pipes/status.pipe';
-import { UserService } from '../services/user.role.service';
+import { OrderPipe } from '../../pipes/order.pipe';
+import { SearchPipe } from '../../pipes/search.pipe';
+import { StatusPipe } from '../../pipes/status.pipe';
+import { UserService } from '../../services/user.role.service';
 
 @Component({
   selector: 'app-users',

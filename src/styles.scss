@@ -23,6 +23,7 @@ body {
   justify-content: center;
 
   &-secondary {
+    padding: 12px 20px;
     border: 1px var(--orange) solid;
     background: var(--white);
     color: var(--orange);
@@ -33,6 +34,7 @@ body {
     cursor: pointer;
   }
   &-primary {
+    padding: 12px 30px;
     height: 48px;
     background: var(--orange);
     color: var(--white);

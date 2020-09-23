@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsersComponent } from './users/users.component';
+import { UsersComponent } from './module/users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TableKeyPipe } from './pipes/table-key.pipe';
 import { TableComponent } from './components/table/table.component';
@@ -15,6 +15,7 @@ import { OrderPipe } from './pipes/order.pipe';
 import { StatusPipe } from './pipes/status.pipe';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HeaderComponent } from './components/header/header.component';
     OrderPipe,
     StatusPipe,
     HeaderComponent,
+    SidebarComponent,
   ],
   imports: [
     HttpClientModule,
